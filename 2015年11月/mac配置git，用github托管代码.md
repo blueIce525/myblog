@@ -2,7 +2,7 @@
 
 ## 安装git
 
-mac系统，推荐安装Ap1、ple公司的Xcode，Xcode集成了Git，最新版的Xcode已经默认安装好了git。完成安装之后，就可以在终端使用git的命令行工具。
+mac系统，推荐安装Apple公司的Xcode，Xcode集成了Git，最新版的Xcode已经默认安装好了git。完成安装之后，就可以在终端使用git的命令行工具。
 
 ## github配置
 （1）注册一个github账户。到https://github.com/ 上注册账号
