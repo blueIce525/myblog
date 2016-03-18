@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>observer</title>
+</head>
+<body>
+<h1>观察者例子</h1>
+<button id="add"> Add new Observer checkbox</button>
+<input id="mainCheckbox" type="checkbox" checked="checked">
+<div id="observersContainer"></div>
+
+
+<h1>订阅发布实现解耦应用</h1>
+
+<script id="userTemplate" type="text/html">
+<li><%= name %></li>
+</script>
+
+<script id="ratingsTemplate" type="text/html">
+<li><strong><%= title %></strong> was rated <%= rating %>/5</li>
+</script>
+
+<div id="container">
+    <div class="sampleForm">
+        <p>
+            <label for="twitter_handle">Twitter Handle</label>
+            <input id="twitter_handle" type="text">
+        </p>
+        <p>
+            <label for="movie_seen">Name a movie you`ve seen this year:</label>
+            <input id="movie_seen" type="text">
+        </p>
+        <p>
+            <label for="movie_rating">Rate the movie you saw:</label>
+            <select id="movie_rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5" selected>5</option>
+            </select>
+        </p>
+        <p>
+            <button id="addBtn">Submit rating</button>
+        </p>
+    </div>
+    <div id="summaryTable">
+        <div id="users"><h3>Resent users</h3></div>
+        <div id="ratings"><h3>Resent movies rated</h3></div>
+    </div>
+</div>
+<a href="#">test jquery的链式操作</a>
+<script src="../module/jquery.min.js"></script>
+<script src="../module/underscore-min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
