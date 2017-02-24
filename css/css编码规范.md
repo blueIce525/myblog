@@ -169,29 +169,29 @@ CSS作为网页样式的描述语言，本文档的目标是使CSS代码风格�
     .selector {
         margin: 0
     }
-    
+
 ### 2.7 注释
 
 注释统一用'/* */'（scss中也不要用'//'），具体参照右边的写法；缩进与下一行代码保持一致；可位于一个代码行的末尾，与代码间隔一个空格。
 
-	/* Modal header */
-	.modal-header {
-    	...
-	}
+    /* Modal header */
+    .modal-header {
+        ...
+    }
 
-	/*
- 	* Modal header
- 	*/
-	.modal-header {
-    	...
-	}
+    /*
+     * Modal header
+     */
+    .modal-header {
+        ...
+    }
 
-	.modal-header {
-    	/* 50px */
-    	width: 50px;
+    .modal-header {
+        /* 50px */
+        width: 50px;
 
-    	color: red; /* color red */
-	}
+        color: red; /* color red */
+    }
 
 ## 3 通用
 
@@ -348,17 +348,17 @@ CSS作为网页样式的描述语言，本文档的目标是使CSS代码风格�
 
 示例：
 
-	/* good */
-	.element {
-    	color: red !important;
-    	background-color: rgba(0, 0, 0, .5);
-	}
-	
-	/* bad */
-	.element {
-    	color :red! important;
-    	background-color: rgba(0,0,0,.5);
-	}
+    /* good */
+    .element {
+        color: red !important;
+        background-color: rgba(0, 0, 0, .5);
+    }
+
+    /* bad */
+    .element {
+        color :red! important;
+        background-color: rgba(0,0,0,.5);
+    }
 
 
 #### [建议] 当需要强制指定样式且不允许任何场景覆盖时，通过标签内联和 `!important` 定义样式。
@@ -849,6 +849,13 @@ CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览
 
 #### [强制] 禁止使用 `Expression`。
 
+## 参考BAT的html规范链接
+百度：[https://github.com/fex-team/styleguide/blob/master/css.md#51-%E5%AD%97%E4%BD%93%E6%97%8F](https://github.com/fex-team/styleguide/blob/master/css.md#51-%E5%AD%97%E4%BD%93%E6%97%8F)
+
+阿里：[http://docs.kissyui.com/1.4/docs/html/tutorials/style-guide/css-coding-style.html](http://docs.kissyui.com/1.4/docs/html/tutorials/style-guide/css-coding-style.html)
+
+
+腾讯：[http://alloyteam.github.io/CodeGuide/#html-boolean-attributes](http://alloyteam.github.io/CodeGuide/#html-boolean-attributes)
 
 
 

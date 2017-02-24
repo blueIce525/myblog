@@ -202,7 +202,7 @@ HTML作为描述网页结构的超文本标记语言，本文档的目标是使H
 示例：
 
     <ol data-ui-type="Select"></ol>
-    
+
 #### 属性顺序
 
 解释：属性应该按照特定的顺序出现以保证易读性。
@@ -222,11 +222,11 @@ id更加具体且应该尽量少使用，所以将它放在第二位。
 
 示例：
 
-	<a class="..." id="..." data-modal="toggle" href="#">Example link</a>
+    <a class="..." id="..." data-modal="toggle" href="#">Example link</a>
 
-	<input class="form-control" type="text">
+    <input class="form-control" type="text">
 
-	<img src="..." alt="...">
+    <img src="..." alt="...">
 
 
 ## 3 通用
@@ -488,30 +488,30 @@ id更加具体且应该尽量少使用，所以将它放在第二位。
 
 ## 8 HTML文档模板
 
-	<!DOCTYPE html>
-	<html>
-    	<head>
-        	<meta charset="utf-8">
-        	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-        	<title>Sample page</title>
-        	<link rel="stylesheet" href="css_example_url">
-    	</head>
-    	<body>
-        	<div id="page">
-            	<div id="header">
-                	页头
-            	</div>
-            	<div id="content">
-                	主体
-            	</div>
-            	<div id="footer">
-                	页尾
-            	</div>
-        	</div>
-        	<script src="js_example_url"></script>       
-    	</body>
-	</html>
-	
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+            <title>Sample page</title>
+            <link rel="stylesheet" href="css_example_url">
+        </head>
+        <body>
+            <div id="page">
+                <div id="header">
+                    页头
+                </div>
+                <div id="content">
+                    主体
+                </div>
+                <div id="footer">
+                    页尾
+                </div>
+            </div>
+            <script src="js_example_url"></script>       
+        </body>
+    </html>
+
 ## 参考BAT的html规范链接
 百度：[https://github.com/fex-team/styleguide/blob/master/html.md#3-%E9%80%9A%E7%94%A8](https://github.com/fex-team/styleguide/blob/master/html.md#3-%E9%80%9A%E7%94%A8)
 
