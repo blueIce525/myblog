@@ -153,6 +153,9 @@ var pubsub = {};
     }
 })(pubsub);
 
+
+
+
 var messageLogger = function(topic, data) {
     console.log('Logging:' + topic + ':' + data);
 };
@@ -242,5 +245,62 @@ pubsub.publish('newData', {
 
         $('a').myPlugin();
     })
+
+    //publish/subscribe 用原型方法实现
+    function SubPub() {
+        this.observers = [];
+    }
+    SubPub.prototype = {
+        constructor: SubPub,
+        subscribe: function(type, fn) {
+            if(typeof type === 'string' && typeof fn === 'function') {
+                if(typeof this.observers[type] === 'undefined') {
+                    this.observers[type] = [fn]
+                } else {
+                    this.observers[type].push(fn)
+                }
+            }
+            return this;
+        },
+        publish: function(type, data) {
+            if(typeof this.observers[type] === 'undefined') {
+                return
+            } else {
+                var observer = this.observers[type];
+                for(var i = 0, l = observer.length; i < l; i++) {
+                    data ? observer[i](data) :  observer[i]()
+                }
+            }
+            return this;
+        },
+        unSubscribe: function(type, fn) {
+            if(typeof this.observers[type] === 'undefined') {
+                return
+            } else {
+                if(fn) {
+                    var observer = this.observers[type];
+                    for(var i = 0, l = observer.length; i < l; i++) {
+                        if(observer[i] === fn) {
+                            observer.splice(i, 1);
+                        }
+                    }
+
+                } else {
+                    delete this.observers[type];
+                }
+            }
+            return this;
+
+        }
+    }
+    var testFun
+    var testSubPub = new SubPub();
+    testSubPub.subscribe('test', testFun = function(){
+        console.log(11)
+    } );
+    testSubPub.publish('test');
+    testSubPub.unSubscribe('test');
+    testSubPub.publish('test');
+
 
 })(jQuery);

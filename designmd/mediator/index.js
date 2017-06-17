@@ -37,6 +37,12 @@ var mediator = (function() {
 
 })();
 
+var testObj = {};
+mediator.installTo(testObj);
+testObj.subscribe('test', function(n) {
+    console.log(n);
+    })
+
 mediator.Subscribe('test', function(n) {
     console.log(n);
 });

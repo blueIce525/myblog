@@ -31,6 +31,7 @@ function Car(settings) {
     this.model = settings.model || 'no model provided';
 }
 
+
 function Mixin() {};
 Mixin.prototype = {
     driveForward: function() {
@@ -53,7 +54,7 @@ function augment(receivingClass, givingClass) {
         }
     } else { //提供所以方法
         for(var methodName in givingClass.prototype) {
-            if(!Object.hasOwnProperty(receivingClass.prototype, methodName)) {
+            if(!Object.prototype.hasOwnProperty.call(receivingClass.prototype, methodName)) {
                 receivingClass.prototype[methodName] = givingClass.prototype[methodName];
             }
         }
@@ -68,7 +69,11 @@ var littleCar = new Car({
 });
 littleCar.driveBackward();
 littleCar.driveForward();
+Mixin.prototype.driveForward = function() {
+    console.log('change')
+};
 
+littleCar.driveForward();
 
 augment(Car, Mixin);
 var sportsCar = new Car({
@@ -76,3 +81,6 @@ var sportsCar = new Car({
     model: 'BWM'
 });
 sportsCar.driveSideways();
+sportsCar.driveBackward();
+
+
